@@ -1,0 +1,17 @@
+{
+  "name": "lab1-typescript",
+  "version": "1.0.0",
+  "description": "Лабораторна робота №1 - Строга типізація у вебі: екосистема мови TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/prompt-sync": "^4.2.3",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
