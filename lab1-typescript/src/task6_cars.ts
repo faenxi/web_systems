@@ -1,10 +1,8 @@
-// ==== Завдання 6: cars.ts ====
 
-// Абстрактний клас - не можна створити "просто Car", можна лише конкретну марку
 abstract class Car {
-  protected brand: string;   // protected: бачать тільки цей клас і його нащадки
-  public model: string;      // public: доступно ззовні (за замовчуванням і так public)
-  private vin: string;       // private: доступно лише всередині самого класу Car
+  protected brand: string; 
+  public model: string;
+  private vin: string;
 
   constructor(brand: string, model: string, vin: string) {
     this.brand = brand;
@@ -16,13 +14,12 @@ abstract class Car {
     return this.vin;
   }
 
-  // абстрактний метод - кожен нащадок ЗОБОВ'ЯЗАНИЙ його реалізувати
   abstract describe(): void;
 }
 
 class Toyota extends Car {
   constructor(model: string, vin: string, public color: string) {
-    super("Toyota", model, vin); // виклик конструктора батьківського класу
+    super("Toyota", model, vin); 
   }
 
   describe(): void {
@@ -56,7 +53,6 @@ class Audi extends Car {
   }
 }
 
-// мінімум по 2 екземпляри для кожної марки
 const car1 = new Toyota("Corolla", "VIN001", "білий");
 const car2 = new Toyota("Camry", "VIN002", "чорний");
 const car3 = new BMW("X5", "VIN003", 340);

@@ -1,0 +1,24 @@
+@use '../styles/mixins' as *;
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  &__button {
+    @include button;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  &__info {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+}

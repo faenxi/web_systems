@@ -1,0 +1,15 @@
+@use '../styles/mixins' as *;
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  &__button {
+    @include button;
+  }
+
+  &__button--active {
+    @include button-primary;
+  }
+}

@@ -1,0 +1,17 @@
+.search-bar {
+  display: grid;
+  gap: 0.25rem;
+
+  &__label {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+}

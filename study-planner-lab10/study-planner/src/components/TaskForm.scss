@@ -1,0 +1,80 @@
+@use '../styles/mixins' as *;
+
+.task-form {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+
+  &--editing {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(11, 110, 110, 0.15);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+
+  &__field {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+  }
+
+  &__input {
+    @include field;
+  }
+
+  &__input[aria-invalid='true'] {
+    border-color: var(--color-danger);
+  }
+
+  &__error {
+    color: var(--color-danger);
+    font-size: 0.875rem;
+  }
+
+  &__textarea {
+    @include field;
+    min-height: 4.5rem;
+    resize: vertical;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__submit {
+    @include button;
+    @include button-primary;
+
+    &:disabled {
+      cursor: progress;
+      opacity: 0.7;
+    }
+  }
+
+  &__cancel {
+    @include button;
+  }
+}
+
+@media (max-width: 520px) {
+  .task-form__row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,3 @@
-// ==== Завдання 8: courses.ts ====
 
 interface Course {
   title: string;
@@ -53,7 +52,6 @@ class CourseManager {
   }
 }
 
-// ---- Демонстрація роботи ----
 const manager = new CourseManager();
 
 const tsCourse = new OnlineCourse("TypeScript Basics", 20);

@@ -1,4 +1,3 @@
-// ==== Завдання 7: employees.ts ====
 
 interface Payable {
   pay(): void;
@@ -11,13 +10,12 @@ abstract class Employee {
     protected salary: number
   ) {}
 
-  // кожен тип співробітника рахує бонус по-своєму
   abstract getAnnualBonus(): number;
 }
 
 class Developer extends Employee implements Payable {
   getAnnualBonus(): number {
-    return this.salary * 0.1; // 10% від зарплати
+    return this.salary * 0.1;
   }
 
   pay(): void {
@@ -27,7 +25,7 @@ class Developer extends Employee implements Payable {
 
 class Manager extends Employee implements Payable {
   getAnnualBonus(): number {
-    return this.salary * 0.2; // 20% від зарплати
+    return this.salary * 0.2; 
   }
 
   pay(): void {
